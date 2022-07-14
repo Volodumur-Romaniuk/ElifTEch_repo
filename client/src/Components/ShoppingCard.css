@@ -1,0 +1,124 @@
+.shopping-card .container .form{
+    width: 40%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+.shopping-card .container .form .elem-form{
+    height: 70%;
+    width: 80%;
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-evenly;
+}
+.shopping-card .container .form .elem-form input{
+    width: 70%;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 15px;
+    padding: 10px;
+}
+.shopping-card .container .form .elem-form .elem-input label{
+    width: fit-content;
+    margin-bottom: 10px;
+}
+.shopping-card .container .form .elem-form .elem-input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.shopping-card .container .order-info{
+    display: flex;
+    height: 85%;
+}
+.shopping-card{
+    margin-top: 1vh;
+    height: 89vh;
+}
+.shopping-card .container{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+.shopping-card .container .order{
+    width: 55%;
+    display: grid;
+    height: 100%;
+    overflow: scroll;
+    grid-template-columns: 1fr 1fr;
+  
+}
+
+.shopping-card .container .order .elem{
+    margin: 15px;
+    height: 370px;
+    width: 90%;
+    border:1px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.shopping-card .container .order .elem .img{
+    width: 100%;
+}
+.shopping-card .container .order .elem img{
+    object-fit: cover;
+    width: 100%;
+}
+.shopping-card .container .order .elem .text{
+    display: flex;
+   margin-left:20px;
+   width: fit-content;
+   padding: 0 10px;
+  
+   
+   font-size: 20px;
+}
+.shopping-card .container .order .elem .text p{
+    margin-right: 15px;
+    text-align: center;
+}
+.shopping-card .container .order .elem .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.shopping-card .container .order .elem .buttons input{
+   
+   width: 100px;
+   
+    border:none;
+    outline: none;
+    border:2px solid rgb(167, 119, 31);
+    font-size: 35px;
+    cursor: pointer;
+}
+.shopping-card .container .order .elem .buttons button{
+    background: red;
+    padding: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 20px;
+}
+.shopping-card .container .total{
+    display: flex;
+    height: 12%;
+    align-items: center;
+    justify-content: flex-end;
+}
+.shopping-card .container .total p {
+    font-size: 30px;
+    font-weight: 500;
+}
+.shopping-card .container .total button{
+    margin: 0 30% 0 20px;
+    height: 75%;
+    padding: 5px 20px;
+    background: rgb(231, 156, 43);
+    font-size: 20px;
+    border-radius: 10px;
+}

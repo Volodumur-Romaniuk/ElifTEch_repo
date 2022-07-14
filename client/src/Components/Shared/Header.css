@@ -1,0 +1,29 @@
+.header{
+    height: 10vh;
+    width: 100%;
+    background:rgb(76, 158, 206);
+}
+.header .container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    place-items: start;
+  
+}
+
+.header .container ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    color:white;
+
+}
+.header .container ul li a{
+    text-decoration: none;
+}
+.header .container ul li a{
+    color:white;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0 20px ;
+}

@@ -1,0 +1,33 @@
+.mainpage{
+    height: 90vh;
+    display: grid;
+    place-items: center;
+}
+
+.mainpage .container{
+    width: 90%;
+    height: 90%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    display: flex;
+}
+.container .shops{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.container .shops button{
+    background: transparent;
+    border: 1px solid black;
+    padding: 20px;
+    
+    font-size: 25px;
+    outline: none;
+    margin: 20px auto;
+}
+.container .shops button:disabled,button[disabled]{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.container .products-shops{
+    width: 70%;
+}

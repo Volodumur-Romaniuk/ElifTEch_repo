@@ -1,0 +1,46 @@
+.products{
+    height: 100%;
+    width: 100%;
+}
+.products .container{
+    margin-top: 30px;
+    box-shadow: none;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+}
+.products .elem-prod{
+    border-radius: 30px;
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.products .elem-prod .img{
+    height: 70%;
+}
+
+.products .elem-prod .img img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.products .elem-prod .info{
+    height: 25%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.products .elem-prod .info button{
+    cursor: pointer;
+    height: 50px;
+    width: 80px;
+}
+.products .elem-prod .text p{
+    margin-right: 10px;
+}
+.products .elem-prod .text{
+    display: flex;
+}
