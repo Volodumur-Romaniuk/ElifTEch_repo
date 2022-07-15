@@ -1,52 +1,12 @@
-const express = require('express');
-const app = express();
-const cors = require('cors')
-const dbo = require('./connection')
-const getDataShops = require("./Controlers/getDataShops")
-
-app.use(express.json())  
-app.use(cors());
+const express = require("express");
 const PORT = process.env.PORT || 5002;
-
-
-dbo.connectToServer(function (err) {
-  if (err) { 
-    console.error(err);
-    return ;
-  }
-
-  // start the Express server
-  app.listen(PORT, () => {
-    console.log(`Server is running on port: ${PORT}`);      
-  });
-});
-app.get('/',(req,res)=>{
-  res
-  .status(200)
-  .send('Hello server!')
-  .end();
-});
-app.get("/getdata", async(req,res) =>{
-    
-  var shopsall = new getDataShops();
- const result = await shopsall.getShops();
- 
-res.json(result);
-})
-
-app.get("/api", (req,res)=>{
-  res.json({message:"Hello from server"});
-});
-
-/*const express = require("express");
 const dbo = require('./connection')
 const getDataShops = require("./Controlers/getDataShops")
 const ShopServices =require('./Controlers/shoppingCardsControler')
-
-const PORT = process.env.PORT || 5002;
+const app = express();
+const cors = require('cors')
 app.use(cors());
-app.use(express.json())  
-
+app.use(express.json())
 dbo.connectToServer(function (err) {
     if (err) { 
       console.error(err);
@@ -55,7 +15,7 @@ dbo.connectToServer(function (err) {
   
     // start the Express server
     app.listen(PORT, () => {
-      console.log(`Server is running on port: ${PORT}`);      
+      console.log(`Server is running on port: ${PORT}`);
     });
   });
 
@@ -85,5 +45,3 @@ app.get("/getdata", async(req,res) =>{
 app.get("/api", (req,res)=>{
     res.json({message:"Hello from server"});
 });
-
-*/
