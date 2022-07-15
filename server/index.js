@@ -1,5 +1,5 @@
 const express = require("express");
-const PORT = process.env.PORT || 5002;
+const PORT = process.env.PORT || 5000;
 const dbo = require('./connection')
 const getDataShops = require("./Controlers/getDataShops")
 const ShopServices =require('./Controlers/shoppingCardsControler')
@@ -7,6 +7,7 @@ const app = express();
 const cors = require('cors')
 app.use(cors());
 app.use(express.json())
+
 dbo.connectToServer(function (err) {
     if (err) { 
       console.error(err);
@@ -18,8 +19,6 @@ dbo.connectToServer(function (err) {
       console.log(`Server is running on port: ${PORT}`);
     });
   });
-
-
   app.get("/shops/:name",async (req,res) =>{  
     let name =req.params.name;
     var shopsall = new getDataShops();
@@ -43,10 +42,10 @@ app.get("/getdata", async(req,res) =>{
   res.json(result);
 })
 app.get("/api", (req,res)=>{
-    res.json({message:"Hello from server"});
+    res.json({message:"Hello from server  "});
 });
 
 
 
-
+       
 
