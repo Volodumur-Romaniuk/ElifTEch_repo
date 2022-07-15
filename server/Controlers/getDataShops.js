@@ -1,6 +1,6 @@
-const { ObjectId } = require('bson');
+
 const dbo = require('../connection');
-const Shop = require('../Models/Shop');
+
 
 class ShopServices{
     constructor() {
@@ -9,8 +9,6 @@ class ShopServices{
     } 
 
     getShops(){ 
-       
-
       return new Promise(resolve => {
           let array =[];
           this.shops.find().toArray().then((result) => {

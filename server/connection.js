@@ -1,5 +1,5 @@
 const {MongoClient} = require('mongodb');
-const mongoose = require("mongoose");
+
 const url = "mongodb+srv://Delivery:12345@cluster0.onyws.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoClient(url, {
@@ -8,8 +8,6 @@ const client = new MongoClient(url, {
   });
 
 let dbConnection;
-
-
 module.exports = {
   connectToServer: function (callback) {
     client.connect(function (err, db) {
@@ -28,5 +26,3 @@ module.exports = {
     return dbConnection;
   },
 };
-
-
