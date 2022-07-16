@@ -1,6 +1,6 @@
 # ElifTEch_repo
-front start with folder client
+front start with folder client (npm start)
 
-backend start with folder server on 5002 port
+backend start with folder server (npm start)
 
 link on app https://eliftech-school-task-front.herokuapp.com
